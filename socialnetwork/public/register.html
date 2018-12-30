@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" ></script>
+    
+</head>
+<body>
+    
+    <h1>Register</h1>
+    <input placeholder="name" id="name" >
+    <input placeholder="lastname" id="lastName" >
+    <input placeholder="email" id="email" >
+    <input placeholder="password" id="password" >
+    <button id="submitButton" >Register</button>
+
+    
+    
+    
+    <script>
+    
+    let socket = io.connect("http://localhost:3000");
+    let name = document.getElementById("name");
+    let lastName = document.getElementById("lastName");
+    let email = document.getElementById("email");
+    let password = document.getElementById("password");
+    let registerButton = document.getElementById("submitButton");
+        
+    registerButton.addEventListener("click", (e) => {
+       register(); 
+    });
+    
+        
+    function register() {
+            let registerData = {
+                name: name.value,
+                lastName: lastName.value,
+                email: email.value,
+                password: password.value
+            }
+            socket.emit("registration", registerData);
+            console.log("Sending registration");
+            console.log(registerData);
+    }
+    
+    
+    </script>
+</body>
+</html>

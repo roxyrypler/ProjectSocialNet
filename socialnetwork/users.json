@@ -1,0 +1,23 @@
+{
+  "numOfUsers": 3,
+  "users": {
+    "user1": {
+      "name": "Patrick",
+      "lastName": "Lie",
+      "email": "patrick@gmail.com",
+      "password": "12345678"
+    },
+    "user2": {
+      "name": "Eirik",
+      "lastName": "Borgli",
+      "email": "eirik@gmail.com",
+      "password": "12345678"
+    },
+    "user3": {
+      "name": "admin",
+      "lastName": "admin",
+      "email": "admin",
+      "password": "admin"
+    }
+  }
+}
