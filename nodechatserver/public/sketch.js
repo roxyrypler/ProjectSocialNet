@@ -1,7 +1,7 @@
 var socket;
 
 function setup() {
-  socket = io.connect('https://warm-cougar-32.localtunnel.me');
+  socket = io.connect('https://roxyrypler.localtunnel.me');
     
     socket.on("sendToOthers", (data) => {
         console.log("msg from Serve:" + data);
